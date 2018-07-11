@@ -1,0 +1,54 @@
+@import './metrics.less';
+
+/* base background color */
+@color-paper: white;
+@color-paper-dark: hsl(0, 0%, 15%);
+
+@color-logic-passage: rgba(252, 51, 51, 0.413);
+@color-avatar-passage: rgba(51, 105, 252, 0.289);
+@color-user-passage: rgba(85, 244, 32, 0.365);
+
+/* a dark transparent color used to fade out inaccessible UI, as on a modal */
+@color-darken: hsla(0, 0%, 0%, 0.8);
+
+/* base foreground color for text */
+@color-text: hsl(0, 0%, 30%);
+@color-text-dark: hsl(0, 0%, 60%);
+
+/* color for emphasized text */
+@color-text-em: black;
+
+/* link color */
+@color-link: hsl(212, 90%, 40%);
+@color-link-dark: lighten(@color-link, 10%);
+
+/* color associated with creating new things, or successful actions */
+@color-create: hsl(140, saturation(@color-link), lightness(@color-link));
+
+/* color associated with creating logic nodes */
+@color-logic:  hsla(0, 85%, 51%, 0.89);
+
+/* color associated with creating avatar nodes*/
+@color-avatar:  hsla(212, 77%, 47%, 0.884);
+
+/* color associated with creating user nodes*/
+@color-user:  hsla(120, 80%, 50%, 0.824);
+
+/* color associated with dangerous actions such as deletion */
+@color-danger: hsl(0, saturation(@color-link), lightness(@color-link));
+
+/* color used to call out text, e.g. highlighting search matches */
+@color-highlight: hsl(60, saturation(@color-link), 50%);
+
+/* color used for borders around form elements */
+@color-form-line: lighten(@color-text, 55%);
+@color-form-line-dark: darken(@color-text-dark, 25%);
+
+/* tag colors */
+@color-tag-blue: @color-link;
+@color-tag-red: @color-danger;
+@color-tag-orange: spin(@color-tag-red, 25);
+@color-tag-yellow: spin(@color-tag-orange, 25);
+@color-tag-green: @color-create;
+@color-tag-purple: spin(@color-tag-blue, 60);
+@color-tag-gray: lighten(desaturate(@color-tag-blue, 100), 20);
